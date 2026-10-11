@@ -17,6 +17,8 @@
     {{ if .Param "updated" }}
     <span class="article-date">, updated: {{ .Params.updated }}</span>
     {{ end }}
+
+    {{ partial "tags.html" .}}
     
     <div class="article-content">
       {{ .Content }}

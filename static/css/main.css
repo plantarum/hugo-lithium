@@ -12,6 +12,25 @@ body {
   -moz-font-feature-settings: "liga" on;
 }
 
+blockquote {
+    font-size: 16px;
+    background-color: rgba(0, 0, 0, 0.02);
+    border-style: double;
+    padding: 5px;
+}
+
+blockquote p:first-of-type {
+    margin-top: 0px;
+}
+
+blockquote p:last-of-type {
+    margin-bottom: 0px;
+}
+
+dt {
+    font-weight: bold;
+}    
+
 h1,
 h2,
 h3,
@@ -19,6 +38,30 @@ h4,
 h5,
 h6 {
   color: #222;
+  font-weight: bold;
+  margin-bottom: 0px;
+}
+
+h1 {
+    font-size: 2.25;
+    line-height: 1.2;
+    margin-bottom: 5px;
+}
+
+h2 {
+    font-variant-caps: small-caps;
+    font-size: 1.5em;
+    margin: 5px 0 0 0;
+}
+
+.archive h2.archive-title {
+    text-indent: 0em;
+    font-weight: normal;
+}
+
+h3 {
+    text-indent: 2em;
+    font-size: 1.17em;
 }
 
 a {
@@ -121,7 +164,7 @@ code {
   color: #fff
 }
 
-.article-content img {
+.article-content img , .article-content video {
     max-width: 100%;
     display: block;
     margin-left: auto;
@@ -129,14 +172,14 @@ code {
 }
 
 .article-content p {
-  margin: 15px 0 25px;
+  margin: 0 0 8px 0;
 }
 
 .article-content a {
   text-decoration: none;
   color: inherit;
   border-bottom: 3px solid #CBF8DF;
-  box-shadow: inset 0 -4px 0 #CBF8DF;
+  box-shadow: inset 0 -2px 0 #CBF8DF;
   background: transparent;
   transition: background 150ms ease;
 }
@@ -163,7 +206,8 @@ code {
 }
 
 .highlight pre {
-  padding: 10px;
+  padding: 1px;
+  margin: 2em 1em;
 }
 
 .archive {
@@ -178,6 +222,7 @@ code {
 .archive-title {
   font-size: 32px;
   margin-top: 60px;
+  text-indent: -1em;
 }
 
 .archive-item {
@@ -254,6 +299,7 @@ code {
 }
 
 @media (min-width: 600px) {
+
   .header {
     padding: 25px 0;
   }
@@ -336,4 +382,21 @@ code {
 
 .references p {
     margin-bottom: 10px;
+}
+
+a.tag {
+    color: #bbb;
+    text-decoration: none;
+    /* border-bottom: 1px solid #bbb; */
+    /* box-shadow: inset 0 -1px 0 #bbb; */
+    background: transparent;
+    transition: background 150ms ease;
+}
+
+.caption , .figcaption {
+    line-height: 1.2;
+    padding-left: 1em;
+    padding-right: 1em;
+    font-size: 16px;
+    margin: 0 0 15px;
 }
