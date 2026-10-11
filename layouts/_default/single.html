@@ -21,6 +21,9 @@
     {{ partial "tags.html" .}}
     
     <div class="article-content">
+      {{ if .Params.toc }}
+      {{ .TableOfContents }}
+      {{ end }}
       {{ .Content }}
     </div>
   </article>
